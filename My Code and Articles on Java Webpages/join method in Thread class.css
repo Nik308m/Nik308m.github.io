@@ -1,0 +1,44 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#code-section, #output-section {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+#code-section h2, #output-section h2 {
+  background-color: #007BFF;
+  color: #FFFFFF;
+  padding: 10px;
+  margin: 0;
+}
+
+pre {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+code {
+  color: #0000FF; /* Blue color for keywords */
+}
+
+.comment {
+  color: #008000; /* Green color for comments */
+}
+
+.output {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+}

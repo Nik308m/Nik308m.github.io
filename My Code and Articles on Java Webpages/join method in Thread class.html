@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Java Multithreading Example</title>
+<link rel="stylesheet" href="join method in Thread class.css">
+</head>
+<body>
+  <header>
+    <h1>Java Multithreading Example</h1>
+  </header>
+
+  <section id="code-section">
+    <h2>Java Source Code</h2>
+    <pre>
+      <code>
+        /* In Java, the join() method is used in multithreading to ensure that a thread
+        completes its execution before the calling thread proceeds further.
+        It essentially waits for the thread to finish. This is particularly useful when you
+        need to coordinate the execution of multiple threads, ensuring certain
+        threads finish before others start or continue. */
+        package com.nikhil308.javapractice;
+
+        // Class to demonstrate thread execution
+        public class JavaPractice {
+
+          public static void main(String[] args) {
+            // Creating four threads
+            MyThread t1 = new MyThread("Thread A");
+            MyThread t2 = new MyThread("Thread B");
+            MyThread t3 = new MyThread("Thread C");
+            MyThread t4 = new MyThread("Thread D");
+
+            // Start thread 1
+            t1.start();
+            try {
+              // Wait for thread 1 to finish
+              t1.join();
+            } catch (InterruptedException e) {
+              // Handle interrupted exception
+              System.out.println(e);
+            }
+
+            // Start thread 2 only after thread 1 finishes
+            t2.start();
+            try {
+              // Wait for thread 2 to finish
+              t2.join();
+            } catch (InterruptedException e) {
+              // Handle interrupted exception
+              System.out.println(e);
+            }
+
+            // Start thread 3 and 4 simultaneously
+            t3.start();
+            t4.start();
+
+            // This line executes after all threads have finished
+            System.out.println("Main thread exiting");
+          }
+        }
+
+        // Class representing a thread
+        class MyThread extends Thread {
+          MyThread(String name){
+            this.setName(name);
+          }
+          public void run() {
+            // Display thread ID running
+            System.out.println("Thread " +Thread.currentThread().getName()+" "+
+            Thread.currentThread().getId() + " is running");
+            try {
+              // Simulating some task by making the thread sleep
+              Thread.sleep(2000);
+            } catch (InterruptedException e) {
+              // Handle interrupted exception
+              System.out.println(e);
+            }
+            // Display that thread has finished
+            System.out.println("Thread " + Thread.currentThread().getId() + " has finished");
+          }
+        }
+      </code>
+    </pre>
+  </section>
+
+  <section id="output-section">
+    <h2>Output</h2>
+    <div class="output">
+      <pre>
+        ------------------------------------------------------------------------
+        Thread Thread A 13 is running
+        Thread 13 has finished
+        Thread Thread B 14 is running
+        Thread 14 has finished
+        Main thread exiting
+        Thread Thread C 15 is running
+        Thread Thread D 16 is running
+        Thread 15 has finished
+        Thread 16 has finished
+        ------------------------------------------------------------------------
+      </pre>
+    </div>
+  </section>
+
+</body>
+</html>
