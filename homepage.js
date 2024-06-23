@@ -43,7 +43,7 @@ updateGreeting();
 setInterval(updateGreeting, 60000); // 60000 milliseconds = 1 minute
 
 
-// Function to display user information
+ /*      // Function to display user information
 function displayUserInfo() {
     // Browser information
     const browser = detectBrowser();
@@ -93,7 +93,7 @@ function displayUserInfo() {
     document.getElementById('datetime').textContent = now.toLocaleString();
 }
 
-// Function to reverse geocode and get location details
+       // Function to reverse geocode and get location details
 function reverseGeocode(latitude, longitude) {
     // Using OpenCage Geocoding API for demonstration (replace with your preferred geocoding API)
     const apiKey = 'YOUR_API_KEY'; // Replace with your API key
@@ -118,7 +118,7 @@ function reverseGeocode(latitude, longitude) {
         });
 }
 
-// Function to detect browser
+      // Function to detect browser
 function detectBrowser() {
     const userAgent = navigator.userAgent;
     let browser = '';
@@ -136,7 +136,7 @@ function detectBrowser() {
     return browser;
 }
 
-// Function to detect OS
+        // Function to detect OS
 function detectOS() {
     const userAgent = navigator.userAgent;
     let os = '';
@@ -152,7 +152,7 @@ function detectOS() {
     return os;
 }
 
-// Function to detect device type
+      // Function to detect device type
 function detectDeviceType() {
     const userAgent = navigator.userAgent;
     if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(userAgent)) {
@@ -164,7 +164,7 @@ function detectDeviceType() {
     }
 }
 
-// Function to extract version number from user agent string
+    // Function to extract version number from user agent string
 function getVersion(userAgent, identifier) {
     const index = userAgent.indexOf(identifier);
     if (index !== -1) {
@@ -173,7 +173,7 @@ function getVersion(userAgent, identifier) {
     return null;
 }
 
-// Event listener for the button click to show user info
+     // Event listener for the button click to show user info
 document.getElementById('showInfoBtn').addEventListener('click', function() {
     const infoSection = document.getElementById('info');
     const infoMessage = document.getElementById('infoMessage');
@@ -183,7 +183,7 @@ document.getElementById('showInfoBtn').addEventListener('click', function() {
         infoMessage.style.display = 'none';
         displayUserInfo();
     }
-});
+}); */
 
                                      
 
