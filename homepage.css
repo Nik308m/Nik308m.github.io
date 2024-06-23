@@ -1,0 +1,381 @@
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa; /* Fallback color */
+    color: #333;
+    margin: 0;
+    padding: 0;
+  /*   background-image: url('Background Image1.jpg'); Replace with your background image path */
+   /* background: linear-gradient(to bottom, #4e54c8, #8f94fb);  Replace with your desired gradient colors */
+   background-image: url('Background Image1.jpg'); /* Replace 'your-background-image.jpg' with your actual image path */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
+    background-attachment: fixed; /* Fixed background position while scrolling */
+}
+
+/* Header styles */
+header {
+    background: linear-gradient(to right, #1a1a1a, #343434); /* Example gradient colors */
+   /* background-color: #343a40;  Dark theme for header */
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.greeting {
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+/* Profile photo styles */
+.profile-photo {
+    margin-left: auto;
+    margin-right: 20px;
+    overflow: hidden;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+
+/* General styling for all containers */
+.container {
+    max-width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Spacing between consecutive containers */
+
+    /* Optional: Background image properties */
+    /* background-image: url('Background Image1.jpg'); */
+    /* background-size: cover; */
+    /* background-position: center; */
+    /* background-repeat: no-repeat; */
+}
+
+/* Specific styling for each container */
+.container:nth-child(odd) {
+    background-color: #f0f0f0; /* Alternate background color for odd containers */
+}
+
+.container:nth-child(even) {
+    background-color: #e0e0e0; /* Alternate background color for even containers */
+}
+
+.container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333; /* Heading color */
+}
+
+.container p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 10px;
+    color: #666; /* Paragraph text color */
+}
+
+
+
+
+
+
+
+
+
+/* Marquee styles */
+#marquee {
+    background-color: #e9ecef;
+    padding: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* Progress bar styles */
+#progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 8px; /* Medium-thick line */
+    background-color: #007bff; /* Blue color for progress */
+    z-index: 99; /* Below header but above other content */
+    transition: width 0.3s ease-out; /* Smooth transition effect */
+}
+
+
+
+/* CSS for gallery */
+.gallery {
+    display: flex;
+    flex-wrap: nowrap; /* Ensure items are in a single line for horizontal scrolling */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-behavior: smooth; /* Smooth scrolling behavior */
+    width: 100%;
+    height: 200px; /* Adjust height as needed */
+    padding: 10px 0; /* Add padding to the top and bottom of the gallery */
+}
+
+.scroll-item {
+    flex: 0 0 auto; /* Prevent items from shrinking */
+    padding: 0 5px; /* Adjust spacing between items */
+    box-sizing: border-box; /* Include padding in the element's total width */
+}
+
+.scroll-item img {
+    max-width: 100%; /* Ensure images do not exceed their container's width */
+    height: auto;
+    display: block;
+    object-fit: contain; /* Maintain aspect ratio and ensure entire image is visible */
+    cursor: pointer; /* Optional: Add pointer cursor for clickable items */
+    transition: transform 0.2s ease; /* Optional: Add a smooth transform effect on hover */
+}
+
+.scroll-item img:hover {
+    transform: scale(1.1); /* Optional: Scale up the image slightly on hover */
+}
+
+#certificates {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.certificate {
+    width: 300px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.certificate a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+}
+
+.company-logo {
+    width: 50px; /* Adjust size as needed */
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 50%; /* Assuming the images are circular */
+}
+
+
+
+#imageGallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+     height: 450px; /* Set a fixed height as needed */
+}
+
+.gallery-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.gallery-item a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+}
+
+.gallery-item img {
+    width: 100%; /* Ensures the image fills the container */
+    height: auto; /* Maintains aspect ratio */
+    max-width: 100%; /* Prevents image overflow */
+    border-radius: 8px; /* Rounded corners for images */
+}
+
+
+/* Section styling */
+#skills {
+    margin-bottom: 40px;
+}
+
+
+/* Skills list styling */
+.skills-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills-list li {
+    font-size: 1.2rem;
+    line-height: 2;
+    color: #666;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.skills-list li::before {
+    content: "• ";
+    color: #4CAF50;
+}
+
+.skills-list li:hover {
+    color: #000;
+}
+
+.skills-list li:hover::after {
+    content: " ✨";
+    position: absolute;
+    right: 0;
+    color: #FFD700;
+    font-size: 1.2rem;
+}
+
+.skills-list li::after {
+    content: "";
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+    
+    .container h2 {
+        font-size: 2rem;
+    }
+    
+    .skills-list li {
+        font-size: 1rem;
+    }
+}
+
+
+/* Section styling */
+#experience {
+    margin-bottom: 40px;
+}
+/* Experience list styling */
+.experience-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.experience-list li {
+    font-size: 1.2rem;
+    line-height: 2;
+    color: #666;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.experience-list li::before {
+    content: "• ";
+    color: #4CAF50;
+}
+
+.experience-list li:hover {
+    color: #000;
+}
+
+.experience-list li:hover::after {
+    content: " ✨";
+    position: absolute;
+    right: 0;
+    color: #FFD700;
+    font-size: 1.2rem;
+}
+
+.experience-list li::after {
+    content: "";
+}
+    
+    .experience-list li {
+        font-size: 1rem;
+    }
+}
+
+/* List items within the sections */
+#skills ul li,
+#experience ul li {
+    font-size: 1.2rem;
+    line-height: 2;
+    color: #333; /* Initial dark color */
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+#skills ul li::before,
+#experience ul li::before {
+    content: "• ";
+    color: #4CAF50;
+}
+
+#skills ul li:hover,
+#experience ul li:hover {
+    color: #FF5722; /* Professional color on hover */
+}
+
+#skills ul li:hover::after,
+#experience ul li:hover::after {
+    content: " ✨";
+    position: absolute;
+    right: 0;
+    color: #FFD700;
+    font-size: 1.2rem;
+}
+
+#skills ul li::after,
+#experience ul li::after {
+    content: "";
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+    
+    .container h2 {
+        font-size: 2rem;
+    }
+    
+    #skills ul li,
+    #experience ul li {
+        font-size: 1rem;
+    }
+}
+
+/* Company logo styling */
+.company-logo {
+    max-width: 50px; /* Adjust size as needed */
+    margin-right: 10px; /* Space between logo and text */
+    vertical-align: middle; /* Align with text */
+}
+
+
+
+
